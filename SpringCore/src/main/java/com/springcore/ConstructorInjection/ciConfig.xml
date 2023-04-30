@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+  https://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/context
+  http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- <bean class="com.springcore.ConstructorInjection.Certificate" name="cert"> 
+		<constructor-arg value="BigData using Java" /> </bean> <bean class="com.springcore.ConstructorInjection.Person" 
+		name="person"> <constructor-arg value="12" /> <constructor-arg value="Sagar" 
+		/> <constructor-arg ref="cert" /> <constructor-arg name="contactlist"> <list> 
+		<value>9822637894</value> <value>9836254178</value> <value>9758623481</value> 
+		</list> </constructor-arg> </bean> -->
+
+
+	<bean class="com.springcore.ConstructorInjection.Addition"
+		name="add">
+		<constructor-arg value="20" type="int" index="1" />
+		<constructor-arg value="30" type="int" index="0" />
+	</bean>
+
+</beans>

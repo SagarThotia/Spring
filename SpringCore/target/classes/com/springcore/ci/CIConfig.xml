@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+  https://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/context
+  http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<bean class="com.springcore.ci.Certificate" name="cer">
+		<constructor-arg value="Android using Kotlin" />
+	</bean>
+
+	<bean class="com.springcore.ci.Person" name="person">
+		<!-- Way-1 -->
+		<constructor-arg>
+			<value>12</value>
+		</constructor-arg>
+
+
+		<!-- Way-2 -->
+		<constructor-arg value="Sagar" />
+		<!-- <constructor-arg value="12" type="int" /> -->
+		<constructor-arg ref="cer" />
+	</bean>
+
+	<!-- <bean class="com.springcore.ci.Certificate" name="cert" c:name="BigData 
+		Using Java" /> <bean class="com.springcore.ci.Person" name="person" c:personId="15" 
+		c:name="Flora Martin" c:ob-ref="cert" /> -->
+</beans>

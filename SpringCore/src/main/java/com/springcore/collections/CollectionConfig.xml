@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+  https://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/context
+  http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean name="emp1" class="com.springcore.collections.Emp">
+		<property name="name" value="Julia Walker" />
+
+		<property name="phones">
+			<!-- if you have a one phone number you can direct assign only value property 
+				will automatically identify -->
+			<!-- <value>9526358970</value> -->
+			<list>
+				<value>9526358971</value>
+				<value>9863457821</value>
+				<value>7563248912</value>
+				<null />
+			</list>
+		</property>
+
+		<property name="addresses">
+			<set>
+				<value>Carslie</value>
+				<value>Birmingham</value>
+				<value>London</value>
+				<value>Manchestor</value>
+			</set>
+		</property>
+
+		<property name="courses">
+			<map>
+				<entry key="Java" value="2Months" />
+				<entry key="Python" value="1.2Months" />
+				<entry key="C" value="1Months" />
+			</map>
+		</property>
+
+		<property name="props">
+			<props>
+				<prop key="username">Sagar</prop>
+				<prop key="password">PerlCamel@21</prop>
+			</props>
+		</property>
+
+	</bean>
+</beans>
