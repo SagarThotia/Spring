@@ -20,7 +20,7 @@ public class JdbcConfig
 		ds.setDriverClassName("com.mysql.cj.jdbc.Driver");
 		ds.setUrl("jdbc:mysql://localhost:3306/springjdbc");
 		ds.setUsername("root");
-		ds.setPassword("MongoDB@6542");
+		ds.setPassword("root");
 		return ds; 
 	}
 	
